@@ -438,7 +438,7 @@ function HomePage({ goTo }: any) {
             ['AI Systems', 'Build copilots, APIs, automations, and decision tools tailored to your business.'],
             ['Growth Retainer', 'Track ROI, improve continuously, and scale high-performing changes.'],
           ].map(([title, text]) => (
-            <Card key={title}><CardContent><div className="text-xl font-semibold">{title}</div><p className="mt-3 text-sm leading-7 text-white/65">{text}</p></CardContent></Card>
+            <Card key={title} className="rounded-[28px] border-white/10 bg-white/[0.045]"><CardContent className="p-6"><div className="text-xl font-semibold">{title}</div><p className="mt-3 text-sm leading-7 text-white/65">{text}</p></CardContent></Card>
           ))}
         </div>
       </section>
@@ -454,7 +454,7 @@ function HomePage({ goTo }: any) {
             <div className="grid gap-5 lg:grid-cols-2">
               {framework.map(([code, title, desc], index) => (
                 <motion.div key={code} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45, delay: index * 0.06 }}>
-                  <Card><CardContent><div className="text-sm uppercase tracking-[0.35em] text-cyan-300">{code}</div><div className="mt-3 text-2xl font-semibold">{title}</div><p className="mt-4 text-sm leading-7 text-white/65">{desc}</p></CardContent></Card>
+                  <Card className="h-full rounded-[28px] border-white/10 bg-white/[0.045]"><CardContent className="p-6"><div className="text-sm uppercase tracking-[0.35em] text-cyan-300">{code}</div><div className="mt-3 text-2xl font-semibold">{title}</div><p className="mt-4 text-sm leading-7 text-white/65">{desc}</p></CardContent></Card>
                 </motion.div>
               ))}
             </div>
@@ -479,7 +479,7 @@ function CompanyPage() {
           ['Mission', 'To help businesses increase revenue, reduce inefficiency, and make better decisions through measurable, technology-enabled consulting.'],
           ['Positioning', 'We do not just analyze businesses. We build systems that continuously improve how they perform.'],
         ].map(([title, text]) => (
-          <Card key={title}><CardContent><div className="text-2xl font-semibold">{title}</div><p className="mt-4 text-sm leading-7 text-white/65">{text}</p></CardContent></Card>
+          <Card key={title} className="rounded-[28px] border-white/10 bg-white/[0.045]"><CardContent className="p-6"><div className="text-2xl font-semibold">{title}</div><p className="mt-4 text-sm leading-7 text-white/65">{text}</p></CardContent></Card>
         ))}
       </div>
       <div className="mt-14 grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
@@ -521,8 +521,8 @@ function ServicesPage({ goTo }: any) {
         {services.map((item) => {
           const Icon = item.icon;
           return (
-            <Card key={item.slug}>
-              <CardContent>
+            <Card key={item.slug} className="rounded-[28px] border-white/10 bg-white/[0.045]">
+              <CardContent className="p-6">
                 <div className="inline-flex rounded-2xl border border-cyan-400/20 bg-cyan-400/10 p-3 text-cyan-300"><Icon className="h-6 w-6" /></div>
                 <div className="mt-5 text-2xl font-semibold">{item.title}</div>
                 <p className="mt-4 text-sm leading-7 text-white/65">{item.short}</p>
@@ -548,8 +548,8 @@ function ProductsPage({ goTo }: any) {
         {products.map((item) => {
           const Icon = item.icon;
           return (
-            <Card key={item.slug}>
-              <CardContent>
+            <Card key={item.slug} className="rounded-[30px] border-white/10 bg-white/[0.045]">
+              <CardContent className="p-7">
                 <div className="inline-flex rounded-2xl border border-violet-400/20 bg-violet-400/10 p-3 text-violet-300"><Icon className="h-6 w-6" /></div>
                 <div className="mt-5 text-2xl font-semibold">{item.title}</div>
                 <p className="mt-4 text-sm leading-7 text-white/65">{item.short}</p>
@@ -621,11 +621,11 @@ function ContactPage() {
 
         <div className="rounded-[32px] border border-white/10 bg-black/40 p-6 backdrop-blur-xl">
           <div className="grid gap-4">
-            <Input placeholder="Your Name" />
-            <Input placeholder="Company Name" />
-            <Input placeholder="Email Address" />
-            <Input placeholder="Service Interested In" />
-            <Textarea placeholder="Tell us about your business challenge" />
+            <Input placeholder="Your Name" className="h-12 rounded-2xl border-white/10 bg-white/5 text-white placeholder:text-white/45" />
+            <Input placeholder="Company Name" className="h-12 rounded-2xl border-white/10 bg-white/5 text-white placeholder:text-white/45" />
+            <Input placeholder="Email Address" className="h-12 rounded-2xl border-white/10 bg-white/5 text-white placeholder:text-white/45" />
+            <Input placeholder="Service Interested In" className="h-12 rounded-2xl border-white/10 bg-white/5 text-white placeholder:text-white/45" />
+            <Textarea placeholder="Tell us about your business challenge" className="min-h-[160px] rounded-2xl border-white/10 bg-white/5 text-white placeholder:text-white/45" />
             <Button className="rounded-2xl bg-cyan-400 text-black hover:bg-cyan-300">Send Inquiry</Button>
           </div>
         </div>
