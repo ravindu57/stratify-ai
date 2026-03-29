@@ -25,7 +25,10 @@ import {
   Workflow,
   X,
 } from 'lucide-react';
-import { Button, Card, CardContent, Input, Textarea } from '@/app/components/ui';
+import { Button } from '@/app/components/ui';
+import { Card, CardContent } from '@/app/components/ui';
+import { Input } from '@/app/components/ui';
+import { Textarea } from '@/app/components/ui';
 
 const navItems = [
   { id: 'home', label: 'Home' },
